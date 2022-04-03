@@ -1,0 +1,61 @@
+from matplotlib import pyplot
+from sklearn.datasets import load_iris
+import pandas as pd
+import numpy as np
+
+a=load_iris()
+a
+
+a.keys()
+
+a.values()
+
+type(a)
+
+#return the valeus of column target
+x=a["target"]
+print(x)
+
+#return the values of column terget_names
+y=a["target_names"]
+print(y)
+
+#return the valuesof colums data
+z=a["data"]
+print(z)
+
+b=np.array(a.data)
+b.shape
+
+b.size
+
+df=pd.DataFrame(a.data,columns=data.feature_names)
+df.head()
+
+df.loc[:]
+
+last_15=df.tail(15)
+last_15
+
+last_15.index
+
+df.loc[10]
+
+df.iloc[10,2]
+
+df.mean()
+
+df.median()
+
+df.hist()
+pyplot.show()
+
+df.plot()
+
+df.plot(kind='box', subplots=True, layout=(3,3), 
+sharex=False,sharey=False)
+pyplot.show()
+
+from pandas.plotting import scatter_matrix
+scatter_matrix(df)
+pyplot.show()
